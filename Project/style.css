@@ -25,33 +25,28 @@
   margin: 2rem 0;
 }
 
-  .logo-container img{
+  .logo {
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    height:13em;
+    width: auto;
+  }
+
+  .top-container img{
     text-align: center;
     padding: 1rem;
     position: relative;
     height:15em;
     width: auto;
+    align-items: center;
   }
-  .logo-container h2 {
+  .top-container h2 {
     font-size: 3rem;
     color:white;
     text-align: center;
+    position: relative;
   }
-  .result-container h2 {
-    font-size: 3rem;
-    color:white;
-    text-align: center;
-  }
-
-  #search-button, #search-bar {
-    display:block;
-    margin: 10px auto;
-  }
-
-  .hidden {
-    display: none;
-  }
-
 
   h1 {
     text-align: center;
@@ -87,27 +82,65 @@ h3 {
   p {
     padding: 0 2.5rem 2.5rem;
     margin: 0;
-    font-size: 0.2;
+    font-size: 1em;
     color: white;
   }
   
   .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   
   .card {
     margin: 0.5rem;
     background: rgb(66, 66, 66);
-    box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
-    border-radius: 12px;
+    box-shadow: .08em .25em 1.2em rgba(0, 0, 0, .1);
+    border-radius: .75em;
     overflow: hidden;
     transition: all .2s linear;
+    position: relative;
+    display: block;
   }
   
+  .video-link {
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: rgb(27, 27, 27);
+    border-radius: 0.2em;
+    border-style: solid black;
+    font-size: 1em;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.video-link:hover {
+  background-color: #696969;
+  text-decoration: underline;
+}
+
   .card:hover {
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
     transform: translate3D(0, -2px, 0);
+  }
+
+  .back-to-top {
+    position: fixed;
+    z-index: 1000;
+    padding: 1em 1em;
+    color: white;
+    font-weight: bold;
+    bottom: 2em;
+    background-color: #666;
+    border-radius: 1em;
+    right: 5em;
+  }
+  .back-to-top:hover {
+    background-color:#3d3d3d  
   }
   
   @media screen and (min-width: 600px) {
