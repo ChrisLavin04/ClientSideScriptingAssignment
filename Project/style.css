@@ -12,7 +12,7 @@
   }
   
   #root {
-    max-width: 1450px;
+    max-width: 90.625em;
     margin: 0 auto;
     height: 100em;
     width: 100em;
@@ -21,13 +21,13 @@
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
+  gap: 1em;
+  margin: 2em 0;
 }
 
   .logo {
     text-align: center;
-    padding: 1rem;
+    padding: 1em;
     position: relative;
     height:13em;
     width: auto;
@@ -35,23 +35,83 @@
 
   .top-container img{
     text-align: center;
-    padding: 1rem;
+    padding: 1em;
     position: relative;
     height:15em;
     width: auto;
     align-items: center;
   }
   .top-container h2 {
-    font-size: 3rem;
+    font-size: 3em;
     color:white;
     text-align: center;
     position: relative;
   }
 
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6em;
+    margin-bottom: 1.25;
+  }
+  
+  #searchbar {
+    width: 18em;
+    height: 2.6em;
+    padding: 0.6em;
+    border: .125em solid #ccc;
+    border-radius: 1.25em;
+    outline: none;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #searchbar:focus {
+    border-color: #6a5acd;
+    box-shadow: 0 0 .6em rgba(106, 90, 205, 0.5);
+  }
+  
+  /* Style for the search button */
+  #searchButton {
+    height: 2.6em;
+    padding: 0 1.2em;
+    border: none;
+    border-radius: 1.25em;
+    background-color: #6a5acd;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #searchButton:hover {
+    background-color: #483d8b;
+  }
+  
+  #showtrending {
+    height: 2.6em;
+    width: 12em;
+    border: none;
+    border-radius: 1.5em;
+    background-color: #ff6347;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  #showtrending:hover {
+    background-color: #d94e37;
+  }
+
+
   h1 {
     text-align: center;
     padding: 1.5rem 2.5rem;
-    /*background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);*/
+    background-image: linear-gradient(120deg, #c5c5c5 0%, #000000 100%);
     background-color: black;
     margin: 0 0 2rem 0;
     font-size: 1.2rem;
@@ -78,6 +138,7 @@ h3 {
     margin: 1rem auto;
     max-width: 100%;
   }
+
   
   p {
     padding: 0 2.5rem 2.5rem;
@@ -124,7 +185,7 @@ h3 {
 }
 
   .card:hover {
-    box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+    box-shadow: 0.2em 0.5em 2.8em rgba(0, 0, 0, .15);
     transform: translate3D(0, -2px, 0);
   }
 
@@ -138,31 +199,32 @@ h3 {
     background-color: #666;
     border-radius: 1em;
     right: 5em;
+    transition: background-color 0.3s ease-in-out;
   }
   .back-to-top:hover {
-    background-color:#3d3d3d  
+    background-color:#3d3d3d;
+    transition: background-color 0.3s ease-in-out;
   }
-  
-  @media screen and (min-width: 600px) {
+
+  @media screen and (min-width:300px){
+  .card{
+    flex: 1 1 calc(75% - 2em)
+    }
+  }
+  @media screen and (min-width: 750px) {
     .card {
-      flex: 1 1 calc(50% - 2rem);
+      flex: 1 1 calc(50% - 2em);
     }
   }
   
-  @media screen and (min-width: 900px) {
+  @media screen and (min-width: 1000px) {
     .card {
-      flex: 1 1 calc(25% - 2rem);
+      flex: 1 1 calc(33% - 2em);
     }
   }
-  /*
-  .card:nth-child(2n) h1 {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+
+  @media screen and (min-width: 1200px) {
+    .card {
+      flex: 1 1 calc(25% - 2em);
+    }
   }
-  
-  .card:nth-child(4n) h1 {
-    background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
-  }
-  
-  .card:nth-child(5n) h1 {
-    background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
-  }*/
